@@ -44,3 +44,8 @@ Slug
 - TypeScript interface
 - Validation logic
 - Pre-save hooks
+
+
+### Public Apis
+- Api - folder
+- Serverside 
