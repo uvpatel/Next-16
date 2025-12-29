@@ -1,6 +1,6 @@
-'use server';
+"use server";
 
-import Event from '@/models/event.model';
+import Event from "@/models/event.model";
 import connectDB from "@/lib/mongodb";
 
 export const getSimilarEventsBySlug = async (slug: string) => {
@@ -8,8 +8,17 @@ export const getSimilarEventsBySlug = async (slug: string) => {
         await connectDB();
         const event = await Event.findOne({ slug });
 
-        return await Event.find({ _id: { $ne: event._id }, tags: { $in: event.tags } }).lean();
-    } catch {
+        if (!event || !event.tags?.length) {
+            return [];
+        }
+        const similarEvents = await Event.find({
+            _id: { $ne: event._id },
+            tags: { $in: event.tags },
+        }).lean();
+
+        return similarEvents;
+    } catch(error : any) {
+        console.error("getSimilarEventsBySlug error:", error);
         return [];
     }
-}
+};
