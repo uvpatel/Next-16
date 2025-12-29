@@ -22,3 +22,19 @@ export const getSimilarEventsBySlug = async (slug: string) => {
         return [];
     }
 };
+
+
+export async function getAllEvents() {
+  try {
+    await connectToDatabase();
+    
+    const events = await Event.find({})
+      .sort({ createdAt: -1 })
+      .lean();
+    
+    return JSON.parse(JSON.stringify(events));
+  } catch (error) {
+    console.error('Error fetching events:', error);
+    return [];
+  }
+}
