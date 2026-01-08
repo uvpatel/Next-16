@@ -1,13 +1,34 @@
 'use client';
 
-import {useState} from "react";
+import {useState , useEffect} from "react";
 import {createBooking} from "@/lib/actions/booking.actions";
 import posthog from "posthog-js";
 
 const BookEvent = ({ eventId, slug }: { eventId: string, slug: string;}) => {
     const [email, setEmail] = useState('');
     const [submitted, setSubmitted] = useState(false);
+    const [isLoaded , setIsLoaded] = useState(false)
 
+    // load state from local storage on mount
+    useEffect(() => {
+        const storedData = localStorage.getItem(`booking_${eventId}`);
+        if (storedData) {
+            const { email: storedEmail, submitted: storedSubmitted } = JSON.parse(storedData);
+            if (storedEmail) setEmail(storedEmail);
+            if (storedSubmitted) setSubmitted(storedSubmitted);
+        }
+        setIsLoaded(true);
+    }, [eventId]);
+
+
+     // Save state to local storage whenever it changes
+    useEffect(() => {
+        if (isLoaded) {
+            localStorage.setItem(`booking_${eventId}`, JSON.stringify({ email, submitted }));
+        }
+    }, [email, submitted, eventId, isLoaded]);
+
+    
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
