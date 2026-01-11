@@ -1,0 +1,90 @@
+[
+  {
+    "id": "P1001",
+    "title": "Classic Blue T-Shirt",
+    "description": "Soft, breathable cotton T-shirt perfect for everyday wear.",
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab",
+    "price": 499,
+    "discount": 20,
+    "rating": 4,
+    "category": "Clothing",
+    "stock": 25
+  },
+  {
+    "id": "P1002",
+    "title": "Premium Leather Wallet",
+    "description": "Handcrafted brown leather wallet with multiple card slots.",
+    "image": "https://images.unsplash.com/photo-1533236897111-3e94666b2edf",
+    "price": 1299,
+    "discount": 10,
+    "rating": 5,
+    "category": "Accessories",
+    "stock": 15
+  },
+  {
+    "id": "P1003",
+    "title": "Wireless Headphones",
+    "description": "Noise-cancelling over-ear headphones with 20-hour battery.",
+    "image": "https://images.unsplash.com/photo-1518444028785-8a4099b89a2d",
+    "price": 2999,
+    "discount": 25,
+    "rating": 4,
+    "category": "Electronics",
+    "stock": 40
+  },
+  {
+    "id": "P1004",
+    "title": "Stylish Sneakers",
+    "description": "Lightweight and comfortable sneakers for everyday use.",
+    "image": "https://images.unsplash.com/photo-1528701800489-20be9ee1e2e7",
+    "price": 1999,
+    "discount": 15,
+    "rating": 5,
+    "category": "Footwear",
+    "stock": 30
+  },
+  {
+    "id": "P1005",
+    "title": "Minimalist Wrist Watch",
+    "description": "A sleek, modern wristwatch with a stainless steel body.",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
+    "price": 2499,
+    "discount": 5,
+    "rating": 4,
+    "category": "Accessories",
+    "stock": 18
+  },
+  {
+    "id": "P1006",
+    "title": "Sports Water Bottle",
+    "description": "BPA-free water bottle with thermal insulation.",
+    "image": "https://images.unsplash.com/photo-1593508512255-86ab42a8e620",
+    "price": 699,
+    "discount": 30,
+    "rating": 4,
+    "category": "Sports",
+    "stock": 50
+  },
+  {
+    "id": "P1007",
+    "title": "Laptop Backpack",
+    "description": "Durable and ergonomic backpack with laptop compartment.",
+    "image": "https://images.unsplash.com/photo-1585386959984-a4155224a1ad",
+    "price": 1599,
+    "discount": 18,
+    "rating": 5,
+    "category": "Bags",
+    "stock": 20
+  },
+  {
+    "id": "P1008",
+    "title": "Scented Soy Candle",
+    "description": "Natural soy candle with calming lavender aroma.",
+    "image": "https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa",
+    "price": 349,
+    "discount": 12,
+    "rating": 5,
+    "category": "Home Decor",
+    "stock": 60
+  }
+]
