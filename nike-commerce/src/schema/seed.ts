@@ -1,11 +1,11 @@
-import { db } from '@/lib/db';
+import { db } from '@/db/index';
 import {
   genders, colors, sizes, brands, categories, collections, productCollections,
   products, productVariants, productImages,
   insertGenderSchema, insertColorSchema, insertSizeSchema, insertBrandSchema,
   insertCategorySchema, insertCollectionSchema, insertProductSchema, insertVariantSchema, insertProductImageSchema,
   type InsertProduct, type InsertVariant, type InsertProductImage,
-} from '@/lib/db/schema';
+} from '@/schema/index';
 import { eq } from 'drizzle-orm';
 import { mkdirSync, existsSync, cpSync } from 'fs';
 import { join, basename } from 'path';

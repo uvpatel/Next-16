@@ -1,9 +1,7 @@
-
-
 "use server";
 
 import { and, asc, count, desc, eq, ilike, inArray, isNull, or, sql, type SQL } from "drizzle-orm";
-import { db } from "@/lib/db";
+import { db } from "@/db/index";
 import {
   brands,
   categories,
@@ -23,9 +21,9 @@ import {
   type SelectGender,
   type SelectColor,
   type SelectSize,
-} from "@/lib/db/schema";
+} from "@/schema/index";
 
-import { NormalizedProductFilters } from "@/lib/utils/query";
+import { NormalizedProductFilters } from "@/utils/query";
 
 type ProductListItem = {
   id: string;
